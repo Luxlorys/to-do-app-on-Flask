@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    {{ task.title }}
+{% endblock %}
+
+{% block body %}
+<div class="container mt-5">
+    <h1>{{ task.title }}</h1>
+
+    <div class="alert alert-info">
+        <p>{{ task.text }}</p>
+        <p><b>Date of publication: {{ task.date.date() }}</b></p>
+        <a href="/detail/{{ task.id }}/del" class="btn btn-danger">Delete</a>
+        <a href="/detail/{{ task.id }}/update" class="btn btn-success">Update</a>
+    </div>
+</div>
+{% endblock %}

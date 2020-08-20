@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Adding a task
+{% endblock %}
+
+{% block body %}
+    <div class="container mt-5">
+        <h1>Adding a new task</h1>
+        <form method="POST">
+            <input type="text" name='title' id="title" class="form-control" placeholder="Task name"><br>
+            <textarea name="text" id="text" class="form-control" placeholder="Text"></textarea><br>
+            <input type="submit" class="btn btn-success" value="Add">
+        </form>
+    </div>
+{% endblock %}
